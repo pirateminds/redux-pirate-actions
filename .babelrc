@@ -1,0 +1,18 @@
+{
+    "comments": false,
+    "code": true,
+    "presets": [
+        ["env", {
+            "targets": {
+              "node": "current"
+            },
+            "loose": true,
+            "modules": "commonjs"
+        }],
+        "stage-1"
+    ],
+    "plugins": [
+        "transform-decorators-legacy",
+        "babel-plugin-root-import"
+    ]
+}

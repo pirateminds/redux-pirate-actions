@@ -1,12 +1,17 @@
 {
   "name": "redux-pirate-actions",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "The simplest way to create actions in redux",
-  "main": "index.js",
+  "main": "dist/index.js",
   "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pirateminds/redux-pirate-actions.git"
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "rm -rf dist & npm run build-commonjs",
+    "build-commonjs": "babel src -d dist"
   },
   "keywords": [
     "redux",
@@ -23,5 +28,14 @@
   "bugs": {
     "url": "https://github.com/pirateminds/redux-pirate-actions/issues"
   },
-  "homepage": "https://github.com/pirateminds/redux-pirate-actions#readme"
+  "homepage": "https://github.com/pirateminds/redux-pirate-actions#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.18.2",
+    "babel-plugin-root-import": "^5.1.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.11.5",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-stage-1": "^6.16.0"
+  }
 }

@@ -1,16 +1,21 @@
+'use strict';
+
+exports.__esModule = true;
+exports.getTypes = getTypes;
+exports.setActionTypes = setActionTypes;
+exports.simpleActions = simpleActions;
 let actionsArray = [];
 let types = {};
 
-export function getTypes() {
+function getTypes() {
     return types;
 }
 
-export function setActionTypes(actions, mutateWith = ['Request', 'Error']) {
+function setActionTypes(actions, mutateWith = ['Request', 'Error']) {
     if (!actionsArray.length) {
         actionsArray = Object.keys(actions);
-        
-        window = window || {};
-        window.types = types = actionsArray.reduce((res, cur) => {
+
+        types = actionsArray.reduce((res, cur) => {
             res[cur] = cur;
 
             mutateWith.forEach(e => {
@@ -20,17 +25,21 @@ export function setActionTypes(actions, mutateWith = ['Request', 'Error']) {
 
             return res;
         }, {});
+
+        if (window) {
+            window.types = types;
+        }
     }
 
     return actionsArray;
 }
 
-export function simpleActions(actions, mutateWith) {
+function simpleActions(actions, mutateWith) {
     let actionsArray = setActionTypes(actions, mutateWith);
 
-    actionsArray.forEach(function(key) {
+    actionsArray.forEach(function (key) {
         let action = actions[key];
-        actions[key] = function() {
+        actions[key] = function () {
             if (!action) {
                 console.warn(`The action ${key} should return Object or Promise`);
                 action = {};
