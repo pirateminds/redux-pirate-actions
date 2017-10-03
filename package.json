@@ -1,0 +1,27 @@
+{
+  "name": "redux-pirate-actions",
+  "version": "1.0.0",
+  "description": "The simplest way to create actions in redux",
+  "main": "index.js",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirateminds/redux-pirate-actions.git"
+  },
+  "keywords": [
+    "redux",
+    "actions",
+    "middleware",
+    "promise",
+    "async"
+  ],
+  "author": "pirateminds.com",
+  "contributors": [
+    "Egor <eguurt@gmail.com> (pirateminds.com)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pirateminds/redux-pirate-actions/issues"
+  },
+  "homepage": "https://github.com/pirateminds/redux-pirate-actions#readme"
+}
