@@ -107,5 +107,12 @@ setActionTypes(actions);
 export const store = createStore({}, reducers);
 ```
 
+## Examples
+
+This module was developed to act with [redux-pirate-promise](https://github.com/pirateminds/redux-pirate-promise) together. 
+The minimal store should looks like: [how to create store](https://gist.github.com/wegorich/2c6a8c2478f9ffce108b5a972fa37fd4
+)
+The minimal controller should looks like: [how to use](https://gist.github.com/wegorich/d3ec7dd2fe324697bf0d37d3d5caece8)
+
 ---
 Copyright (c) 2017 Pirate Minds. [Licensed with The MIT License (MIT)](/LICENSE).
